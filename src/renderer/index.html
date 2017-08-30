@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    const isDev = process.env.NODE_ENV === 'dev'
+const scriptSrc = isDev
+  ? 'http://localhost:8080/index.bundle.js'
+  : '../../dist/index.bundle.js'
+const $ = require('jquery')
+$.getScript(scriptSrc)
+</script>
+  </body>
+</html>
